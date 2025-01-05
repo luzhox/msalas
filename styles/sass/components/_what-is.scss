@@ -1,0 +1,75 @@
+.what-is {
+  background: linear-gradient(270deg, #C7C6D8 13.82%, #F8F8FF 50%);
+  position: relative;
+  min-height: 636px;
+
+  &__content {
+    max-width: 576px;
+    position: relative;
+    z-index: 3;
+
+    h2 {
+      color: #111C3E;
+      font-family: $primary-text;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 18px;
+      margin-top: 0px;
+      padding-top: 24px;
+
+      @include tablet {
+        font-size: 40px;
+      }
+    }
+
+    p {
+      color: $gray;
+      text-align: justify;
+      font-family: $secondary-text;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.6px;
+      margin-bottom: 16px;
+      text-rendering: geometricPrecision;
+
+      strong {
+        font-weight: 600;
+      }
+
+      @include tablet {
+        font-size: 22px;
+      }
+    }
+  }
+
+  &__img {
+    img {
+      display: block;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    @include tablet {
+      max-height: 636px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+}

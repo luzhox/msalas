@@ -1,7 +1,6 @@
 $ = jQuery.noConflict()
 
 $(document).ready(function () {
-  AOS.init()
   let prevScrollpos = $(window).scrollTop() + 70
 
   localStorage.removeItem('valuesBrand')
@@ -51,9 +50,9 @@ $(document).ready(function () {
 
     function handleIntersect(entries, observer) {
       entries.forEach(function (entry) {
-        if (entry.target === document.querySelector('.about-us__counters') && entry.intersectionRatio >= 0.5 && !localStorage.getItem('viewNumbers')) {
+        if (entry.target === document.querySelector('.metrics') && entry.intersectionRatio >= 0.5 && !localStorage.getItem('viewNumbers')) {
           localStorage.setItem('viewNumbers', true)
-          $('.about-us__count__animated').each(function () {
+          $('.numberAnimated').each(function () {
             $(this)
               .prop('Counter', 0)
               .animate(
@@ -83,6 +82,9 @@ $(document).ready(function () {
 
     if (document.getElementById('valuesBrand')) {
       createObserver(document.getElementById('valuesBrand'))
+    }
+    if (document.getElementsByClassName('metrics')[0]) {
+      createObserver(document.getElementsByClassName('metrics')[0])
     }
     if (document.getElementsByClassName('about-us__counters')[0]) {
       createObserver(document.getElementById('valuesBrand'))
@@ -192,4 +194,6 @@ $(document).ready(function () {
     $('.hero-service__buttons').addClass('owl-carousel owl-theme')
     addCarousel('hero-service__buttons', 0, 3, true, 0, 5, false, true, false, false, 4000, '', '', false, 5, false, 20, false)
   }
+
+  AOS.init()
 })

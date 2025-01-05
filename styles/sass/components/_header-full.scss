@@ -1,0 +1,114 @@
+.header-full {
+    .header-full-container {
+
+
+        .header-full-item {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+
+            flex-flow: wrap;
+
+            @include tablet {
+                align-items: center;
+            }
+
+            .overlay {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                opacity: 0.53;
+            }
+
+            img {
+                position: absolute;
+                z-index: -2;
+                object-fit: cover;
+                height: 100vh;
+                width: 100%;
+            }
+
+            .container {
+                padding: 0;
+            }
+
+            &__content {
+                width: 100%;
+                margin-top: 110px;
+
+                @include tablet {
+                    margin-top: 0px;
+                }
+
+                h4 {
+                    color: #FFF;
+                    font-family: $secondary-text;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 200;
+                    line-height: normal;
+                }
+
+                h2 {
+                    font-family: $primary-text;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 52px;
+                    line-height: 63px;
+                    letter-spacing: -1px;
+                    color: #ffffff;
+                    margin-bottom: 32px;
+                    width: col(30, 37);
+                    margin-left: 0;
+
+                    strong {
+                        font-weight: 600;
+                    }
+
+                    @include mobile {
+                        width: auto;
+                        font-size: 28px;
+                        line-height: 120%;
+                        letter-spacing: -1px;
+                    }
+
+                    @media only screen and (min-width: 744px) and (max-width: 1199px) {
+                        width: auto;
+                        font-size: 44px;
+                        line-height: 52px;
+                    }
+                }
+
+                a {
+                    font-family: $secondary-text;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: center;
+                    color: $color-primary-text-button;
+                    border: 1px solid #9ECBFF;
+                    background: transparent;
+                    display: inline-block;
+                    padding: 12px 40px;
+
+                    &:hover {
+                        background: $primary-hover;
+                    }
+                }
+
+                @media only screen and (max-width: 1199px) {
+                    width: 84%;
+                    max-width: 840px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+
+}

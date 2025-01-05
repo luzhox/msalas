@@ -1,0 +1,64 @@
+.book {
+  background: linear-gradient(90deg, rgba(217, 242, 255, 0.20) 3.44%, rgba(169, 216, 242, 0.20) 99.99%);
+  display: flex;
+  align-items: center;
+
+  &__img {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      max-width: 500px;
+    }
+  }
+
+  &__text {
+    max-width: 768px;
+    margin-left: 44px;
+
+    .buttons {
+      margin-top: 16px;
+    }
+
+    a {
+      background: #161637;
+      color: #fff;
+
+      &:last-child {
+        background: white;
+        color: #161637;
+        border: 1px solid #161637;
+        margin-left: 16px;
+      }
+    }
+
+    h4 {
+      color: #111C3E;
+      font-family: $secondary-text;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: #111C3E;
+      font-family: $primary-text;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    p {
+      color: #000;
+      font-family: $secondary-text;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

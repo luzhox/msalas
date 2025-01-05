@@ -1,0 +1,124 @@
+.metrics {
+  position: relative;
+  min-height: 548px;
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  &__content,
+  &__title {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 100%;
+      max-width: 258px;
+
+      @include mobile {
+        margin-bottom: 32px;
+      }
+
+      h3 {
+        color: white;
+        text-align: center;
+        font-family: 'DM Serif Text', serif;
+        font-size: 80.913px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -1.839px;
+        text-rendering: geometricPrecision;
+
+        span {
+          color: white;
+          text-align: center;
+          font-family: 'DM Serif Text', serif;
+          font-size: 80.913px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: -1.839px;
+          text-rendering: geometricPrecision;
+
+          &.sufix {
+            font-size: 32px;
+            margin-left: 8px;
+            letter-spacing: 0px;
+          }
+        }
+      }
+
+      p {
+        color: white;
+        font-family: $secondary-text;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    h2 {
+      color: white;
+      font-family: $primary-text;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      @include tablet {
+        font-size: 40px;
+
+      }
+    }
+  }
+
+  &__img {
+    img {
+      display: block;
+    }
+
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    z-index: 1;
+
+    @include tablet {
+      max-height: 548px;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+}

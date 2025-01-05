@@ -1,0 +1,237 @@
+.story {
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+
+  @include tablet {
+    align-items: center;
+    min-height: 690px;
+
+    height: 690px;
+    overflow: hidden;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+
+    @include mobile {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+
+  &__menu {
+
+    width: 100%;
+
+    @include mobile {
+      display: flex;
+      overflow-x: scroll;
+      margin-bottom: 24px;
+    }
+
+    @include tablet {
+      max-width: 220px;
+      max-height: 400px;
+    }
+
+    &__item {
+      width: max-content;
+
+      @include mobile {
+        margin-right: 12px;
+      }
+
+      button {
+        color: #F0EFF2;
+        font-family: $primary-text;
+        width: max-content;
+
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 24px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+
+        @include tablet {
+          font-size: 28px;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: #9ECBFF;
+          transition: width 0.3s;
+          position: absolute;
+          bottom: -4px;
+          left: 0px;
+        }
+
+        &.active,
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+
+        }
+      }
+    }
+  }
+
+  &__content {
+    max-width: 870px;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &__item {
+      opacity: 0;
+      z-index: 0;
+      width: 100%;
+      display: none;
+
+      @include tablet {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+
+
+      h3 {
+        color: #F0F0F2;
+        text-align: justify;
+        font-family: $primary-text;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 16px;
+
+        @include tablet {
+          font-size: 40px;
+        }
+      }
+
+      p {
+        color: #F0F0F2;
+        text-align: justify;
+        font-family: $secondary-text;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+        margin-bottom: 24px;
+
+        @include tablet {
+          font-size: 24px;
+        }
+      }
+
+      .buttons {
+        .btn__primary {
+          background: transparent;
+          border: 1px solid white;
+          color: white;
+
+          @include tablet {
+            margin-right: 12px;
+
+          }
+
+          &:hover {
+            background: white;
+            color: #111C3E;
+          }
+        }
+      }
+
+      &.active {
+        opacity: 1;
+        z-index: 1;
+        display: block;
+
+        -webkit-animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      }
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+    }
+  }
+}
+
+.numberStory {
+  position: absolute;
+  right: 50px;
+  top: -310px;
+  opacity: 0.15;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  h4 {
+    font-size: 120px;
+    color: white;
+    font-family: $primary-text;
+
+    @include tablet {
+      display: block;
+      font-size: 840px;
+    }
+  }
+}
+
+@-webkit-keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

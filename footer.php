@@ -5,8 +5,12 @@
                         <img id="logito" src="<?php echo get_theme_mod('brand_img-revert'); ?>">
                 </div>
                 <div class="site-footer__links">
-                        <p class="title">Otros Links:</p>
+                        <p class="title">Te puede interesar:</p>
                         <?php wp_nav_menu(array('theme_location'=>'footer')); ?>
+                </div>
+                <div class="site-footer__address">
+                <p class="title">Escríbeme:</p>
+                  <a href="mailto:info@jmartinsalasj.com" >info@jmartinsalasj.com</a>
                 </div>
                 <div class="site-footer__social">
                         <p class="title">Síguenos en:</p>
@@ -26,9 +30,7 @@
                                 </svg>
                                 <?php echo esc_html(get_option('numero_page')); ?></a>
                 </div>
-                <div class="site-footer__address">
-                        <?php dynamic_sidebar('location')?>
-                </div>
+
         </div>
 </footer>
 </div>

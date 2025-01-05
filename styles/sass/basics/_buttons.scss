@@ -1,19 +1,19 @@
 .btn {
-    padding: 16px 48px;
+    padding: 12px 48px;
     display: inline-block;
     font-size: 18px;
-    @include border-radius(8px);
     @include transition(.3s);
+    font-family: $secondary-text;
 
     &__primary {
         @extend .btn;
-        background-color: $primary;
-        color: $color-primary-text-button;
-        font-size: 18px;
+        background-color: white;
+        color: $gray;
+        font-size: 16px;
         line-height: 156%;
-        text-transform: uppercase;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: 0.6px;
+        text-rendering: geometricPrecision;
 
         &:hover {
             background: $primary-hover;

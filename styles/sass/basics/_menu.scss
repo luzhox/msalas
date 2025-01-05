@@ -15,7 +15,8 @@
 
     &.active,
     &.actived {
-        background: #fff;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), radial-gradient(50% 50% at 50% 50%, #1A1936 0%, #0E0D24 100%);
+        background-blend-mode: normal, multiply;
     }
 
     @include desktop {
@@ -23,7 +24,8 @@
 
         &.actived,
         &.active {
-            background-color: white;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), radial-gradient(50% 50% at 50% 50%, #1A1936 0%, #0E0D24 100%);
+            background-blend-mode: normal, multiply;
         }
     }
 
@@ -31,7 +33,7 @@
         z-index: 30;
         position: relative;
         min-height: 75px;
-        padding: 16px 0px;
+        padding: 32px 0px;
         width: 100%;
         max-width: 100%;
         display: flex;
@@ -41,7 +43,7 @@
 
         @include desktop {
             width: 100%;
-            max-width: 1184px;
+            max-width: 1200px;
             margin: 0 auto;
         }
     }
@@ -65,7 +67,7 @@
                 display: block;
 
                 @include tablet {
-                    height: 74px;
+                    height: 52px;
                 }
 
                 @include desktop {
@@ -366,7 +368,8 @@
 
             .main-navegation {
                 height: 100vh;
-                background: white;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), radial-gradient(50% 50% at 50% 50%, #1A1936 0%, #0E0D24 100%);
+                background-blend-mode: normal, multiply;
 
                 @include desktop {
                     height: auto;
@@ -449,8 +452,10 @@
                 color: $gray;
             }
 
-            background: white;
-            box-shadow: 0 5px 40px #dfdfdf;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+            radial-gradient(50% 50% at 50% 50%, #1A1936 0%, #0E0D24 100%);
+            background-blend-mode: normal,
+            multiply;
 
             .site-header-brand {
                 padding-bottom: 0px;
@@ -476,7 +481,7 @@
 
             .phone-contact {
                 a {
-                    color: $primary;
+                    color: white;
                 }
 
                 svg {
@@ -486,11 +491,11 @@
             }
 
             li a {
-                color: $gray !important;
+                color: white !important;
             }
 
             .container {
-                max-width: 1184px;
+                max-width: 1200px;
 
 
 
