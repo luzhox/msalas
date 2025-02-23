@@ -1,6 +1,16 @@
 .recomendations {
+  .container {
+    @include mobile {
+      width: 100%;
+      padding-left: 32px;
+    }
+  }
+
   &__title {
-    text-align: center;
+    @include tablet {
+      text-align: center;
+
+    }
 
     h3 {
       color: $gray;
@@ -19,22 +29,53 @@
 
   &__content {
     display: flex;
-    justify-content: center;
+
+    overflow-x: auto;
     margin-top: 32px;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include desktop {
+      overflow-x: none;
+
+      justify-content: center;
+    }
 
     &__item {
+      min-width: 180px;
       max-width: 240px;
       margin-right: 24px;
+      scroll-snap-align: center;
 
-      &:last-child {
-        margin-right: 0;
+      @include tablet {
+        &:last-child {
+          margin-right: 0;
+
+        }
+      }
+
+      h3 {
+        color: #111C3E;
+        font-family: $secondary-text;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
 
       .img {
+        margin-bottom: 12px;
+
         img {
           width: 100%;
           height: auto;
           object-fit: cover;
+          border: 1px solid rgb(243, 244, 252);
+          box-shadow: 0px 0px 20px rgb(243, 244, 252);
+
         }
       }
     }

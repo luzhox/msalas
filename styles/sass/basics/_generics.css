@@ -1,0 +1,303 @@
+.container {
+  max-width: 480px;
+  width: 84%;
+  margin: 0 auto;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: initial;
+}
+
+@media only screen and (min-width: 745px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .container {
+    max-width: 1184px;
+    box-sizing: border-box;
+  }
+}
+
+.btn, .btn__primary, .btn__primary--border {
+  padding: 12px 48px;
+  display: inline-block;
+  font-size: 18px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-family: "DM Sans", sans-serif;
+}
+
+.btn__primary {
+  background-color: white;
+  color: #111C3E;
+  font-size: 16px;
+  line-height: 156%;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-rendering: geometricPrecision;
+}
+
+.btn__primary:hover {
+  background: white;
+}
+
+.btn__primary--border {
+  background: transparent;
+  border: 1px solid #065A98;
+  color: #065A98;
+}
+
+.btn__primary--border:hover {
+  border: 1px solid #0668ad;
+  color: #0668ad;
+}
+
+.input-field {
+  position: relative;
+  margin-top: 16px;
+  min-height: 54px;
+  box-sizing: border-box;
+}
+
+.input-field input[type="text"],
+.input-field input[type="email"],
+.input-field input[type="number"],
+.input-field input[type="password"],
+.input-field textarea,
+.input-field select {
+  color: #111C3E;
+  border: solid 1px #111C3E;
+  width: 100%;
+  height: 54px;
+  padding-left: 20px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  outline: none;
+  font-size: 16px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  font-family: "Butler", serif;
+  font-weight: 300;
+  appearance: none;
+  -webkit-transition: border 0.3s, -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s, border 0.3s, -webkit-box-shadow 0.3s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background: transparent;
+  position: relative;
+  z-index: 20;
+}
+
+.input-field .show-error {
+  display: none;
+}
+
+.input-field label {
+  color: #111C3E;
+  position: absolute;
+  bottom: 40%;
+  left: 20px;
+  top: 20px;
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  z-index: 10;
+  font-family: "Butler", serif;
+  font-weight: 300;
+  cursor: text;
+  -webkit-transition: color 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, color 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  text-align: initial;
+}
+
+.input-field label.active {
+  -webkit-transform: translateY(-18px) scale(0.8);
+  transform: translateY(-18px) scale(0.8);
+  bottom: 39%;
+}
+
+.input-field.active input[type="text"],
+.input-field.active input[type="email"],
+.input-field.active input[type="number"],
+.input-field.active input[type="password"] {
+  padding-top: 16px;
+}
+
+.input-field.active label {
+  -webkit-transform: translateY(-14px) scale(0.8);
+  transform: translateY(-14px) scale(0.8);
+  bottom: 36%;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.input-field.active textarea {
+  padding-top: 43px;
+}
+
+.input-field.active textarea label {
+  -webkit-transform: translateY(-12px) scale(0.8);
+  transform: translateY(-12px) scale(0.8);
+  bottom: 3%;
+}
+
+.btn-form {
+  background: #065A98;
+  border: 1px solid #065A98;
+  box-sizing: border-box;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 20px 0px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  margin-top: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.btn-form:hover {
+  background-color: #065A98;
+  box-shadow: 0px 0px 10px #065A98;
+}
+
+@media only screen and (min-width: 745px) {
+  .group-form-2 {
+    width: calc((100% / $total) * $columns);
+    display: inline-block;
+    margin-right: calc((100% / $total) * $columns);
+  }
+}
+
+.group-form-2:nth-child(3) {
+  margin-right: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 0;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  outline: 0px;
+  text-rendering: geometricPrecision;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -webkit-scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -webkit-scroll-behavior: smooth;
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  box-shadow: 0px;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.hide-on-small-only {
+  display: none !important;
+}
+
+@media only screen and (min-width: 745px) {
+  .hide-on-small-only {
+    display: block !important;
+  }
+}
+
+.hide-on-medium-only {
+  display: none;
+}
+
+@media only screen and (min-width: 745px) {
+  .hide-on-medium-only {
+    display: block;
+  }
+}
+
+.hide-tablet-on-up {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 745px) {
+  .hide-tablet-on-up {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  #contenido {
+    overflow: initial;
+  }
+}
+
+.container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media only screen and (min-width: 745px) {
+  .container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}

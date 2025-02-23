@@ -21,7 +21,13 @@
          url('<?php echo get_template_directory_uri()?>/font/butler-free-bd-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
-
+}
+@font-face {
+    font-family: 'Butler';
+    src: url('<?php echo get_template_directory_uri()?>/font/butler-free-blk-webfont.woff2') format('woff2'),
+         url('<?php echo get_template_directory_uri()?>/font/butler-free-blk-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
 }
 	</style>
 	<?php wp_head(); ?>

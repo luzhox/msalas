@@ -7,6 +7,11 @@
   <div class="container">
     <div class="friday-comments__title" data-aos="fade-right">
       <h3><?php the_sub_field('title')?></h3>
+      <div class="friday-comments__title__img">
+        <?php $image = get_sub_field('profileimg');if (!empty($image)) : ?>
+          <img class="hide-on-small-only" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+        <?php endif; ?>
+      </div>
     </div>
     <div class="friday-comments__videos" data-aos="fade-left">
     <?php if (have_rows('reflextions')) {while (have_rows('reflextions')) {the_row(); ?>

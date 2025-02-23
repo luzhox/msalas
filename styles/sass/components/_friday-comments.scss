@@ -1,6 +1,20 @@
 .friday-comments {
-  height: 570px;
   position: relative;
+
+  .container {
+    width: 100%;
+    padding-left: 32px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+
+    @include tablet {
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+  }
 
   &__bg {
     width: 100%;
@@ -20,14 +34,33 @@
 
   &__videos {
     display: flex;
-    flex-flow: wrap;
     align-items: center;
     max-width: 740px;
+    overflow-x: auto;
+    margin-top: 48px;
+    padding-right: 32px;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include tablet {
+      flex-flow: wrap;
+      position: relative;
+      top: -48px;
+      margin-top: 0px;
+      padding-right: 0;
+      margin-left: 24px;
+      margin-top: 0;
+    }
 
     &__item {
       max-width: 224px;
+      min-width: 224px;
       margin-right: 16px;
       position: relative;
+      scroll-snap-align: center;
 
       a {
         position: absolute;
@@ -43,9 +76,7 @@
           color: #FFF;
           font-family: $secondary-text;
           font-size: 22px;
-          font-style: normal;
           font-weight: 500;
-          line-height: normal;
           text-align: center;
           margin-top: 8px;
         }
@@ -57,15 +88,18 @@
 
       .img {
         width: 100%;
-
         position: relative;
+        object-fit: cover;
+
+        @include tablet {
+          height: 330px;
+        }
 
         svg {
           position: absolute;
           left: 0;
           right: 0;
-          margin-left: auto;
-          margin-right: auto;
+          margin: auto;
           display: block;
           top: 36%;
         }
@@ -74,6 +108,11 @@
           width: 100%;
           height: auto;
           object-fit: cover;
+          object-position: top center;
+
+          @include tablet {
+            height: 330px;
+          }
         }
       }
     }
@@ -82,31 +121,27 @@
   &__title {
     max-width: 372px;
 
+    &__img {
+      width: 100%;
+
+      img {
+        width: 398px;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+    }
+
     h3 {
       color: #FFF;
       font-family: $primary-text;
-      font-size: 44px;
-      font-style: normal;
+      font-size: 28px;
       font-weight: 700;
-      line-height: normal;
+      text-align: center;
 
-      &::after {
-        content: '';
-        display: block;
-        width: 100px;
-        height: 2px;
-        background: #9ECBFF;
-        margin-top: 8px;
+      @include tablet {
+        font-size: 40px;
       }
     }
-  }
-
-  .container {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-flow: wrap;
-    align-items: center;
-
   }
 }

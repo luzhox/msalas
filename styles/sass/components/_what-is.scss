@@ -3,6 +3,16 @@
   position: relative;
   min-height: 636px;
 
+  .container {
+    @include tablet {
+      max-width: 85vw;
+    }
+
+    @include desktop {
+      max-width: 1184px;
+    }
+  }
+
   &__content {
     max-width: 576px;
     position: relative;
@@ -41,7 +51,18 @@
       }
 
       @include tablet {
-        font-size: 22px;
+        font-size: 20px;
+      }
+    }
+
+    a {
+      @extend .btn__primary;
+      background: #111C3E;
+      color: white;
+
+      &:hover {
+        background: #111C3E;
+        color: white;
       }
     }
   }

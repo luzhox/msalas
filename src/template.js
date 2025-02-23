@@ -157,7 +157,7 @@ $(document).ready(function () {
       items: number,
       slideBy: slideBy || 1,
       URLhashListener: URLhashListener,
-      autoplayHoverPause: true,
+      autoplayHoverPause: false,
 
       responsive: {
         0: {
@@ -185,15 +185,14 @@ $(document).ready(function () {
 
   addCarousel('hero-service__hero', 'URLHash', 1, true, 0, 1, false, false, false, false, 3000, '', '', false, false, false, 0, true)
   addCarousel('clients__items', 0, 1, true, 16, 4, true, true, false, true, 3000, '', '', false, false, false, 32)
-  addCarousel('hero-container', 0, 1, true, 0, 1, true, true, false, true, 5000)
+  addCarousel('hero-container', 0, 1, true, 0, 1, true, true, false, true, 5000, '', '', false, false, false, 0)
   addCarousel('team__carousel', 0, 2, true, 0, 5, true, true, false, false, 3000, '', '', true, false, false, 0, false)
   addCarousel('success-stories__content', 0, 1, true, 32, 3, false, false, false, false, 3000, '', '', false, 4, false, 40)
-  addCarousel('header-principal__text__carousel', 0, 1, true, 0, 1, true, false, false, true, 4000)
+  addCarousel('header-principal__text__carousel', 0, 1, true, 0, 1, true, true, false, true, 4000)
 
   if (window.matchMedia('(min-width: 900px)').matches) {
     $('.hero-service__buttons').addClass('owl-carousel owl-theme')
     addCarousel('hero-service__buttons', 0, 3, true, 0, 5, false, true, false, false, 4000, '', '', false, 5, false, 20, false)
   }
-
   AOS.init()
 })

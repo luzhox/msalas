@@ -1,5 +1,5 @@
 <div class="book" >
-  <div class="book__img" data-aos="fade-right">
+  <div class="book__img" data-aos-offset="-330" data-aos="fade-right">
     <?php if (get_sub_field('img')): ?>
       <img src="<?php the_sub_field('img')?>" alt="Mis Libros - Jose Martin Salas">
     <?php endif; ?>
@@ -17,7 +17,7 @@
                 $link_title = $link['title'];
                 $link_target = $link['target'] ? $link['target'] : '_self';
                 ?>
-                <a class="btn__primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                <a href="<?php the_sub_field('pdf')?>" class="btn__primary" target="_blank"><?php echo esc_html( $link_title ); ?></button>
             <?php endif; ?>
             <?php
             $link2 = get_sub_field('linkTwo');
@@ -32,3 +32,20 @@
       </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    let id = "revistafragments"
+    let resource = $('#'+id).data('pdf')
+    $('#'+id).swipeBook({
+pdfUrl: resource,
+
+lightBox:true,
+lightBoxFullscreen:true,
+lightboxStartPage:true,
+lightboxResetOnOpen:true
+
+});
+});
+</script>

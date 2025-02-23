@@ -1,6 +1,6 @@
-<div class="what-is" data-aos="fade-in">
+<div class="what-is" data-aos-offset="-400" data-aos="fade-in">
   <div class="container">
-    <div class="what-is__content" data-aos="fade-right" data-aos-delay="100">
+    <div class="what-is__content" data-aos-offset="-400" data-aos="fade-right" data-aos-delay="100">
       <?php the_sub_field('text')?>
     </div>
   </div>

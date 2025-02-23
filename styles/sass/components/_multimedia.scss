@@ -1,13 +1,23 @@
 .multimedia {
   background: linear-gradient(90deg, rgba(203, 203, 206, 0.20) 0%, rgba(177, 176, 190, 0.20) 100%);
 
+  .container {
+    @include mobile {
+      width: 100%;
+      padding-left: 32px;
+    }
+  }
+
   @include tablet {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 
   &__title {
-    text-align: center;
+    @include tablet {
+      text-align: center;
+
+    }
 
     h3 {
       color: $gray;
@@ -48,10 +58,21 @@
 
   &__content {
     display: flex;
-    flex-flow: wrap;
-    justify-content: center;
     margin-top: 24px;
     position: relative;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-right: 32px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include tablet {
+      justify-content: center;
+      flex-flow: wrap;
+      padding-right: 0px;
+    }
 
     a {
       position: absolute;
@@ -63,10 +84,14 @@
     }
 
     &__item {
-      width: 100%;
       max-width: 352px;
       margin-right: 24px;
       position: relative;
+      width: 100%;
+      min-width: 280px;
+      scroll-snap-align: center;
+
+      @include tablet {}
 
       .tag {
         display: inline-block;

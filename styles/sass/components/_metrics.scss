@@ -1,8 +1,14 @@
 .metrics {
   position: relative;
-  min-height: 548px;
+  min-height: 400px;
   display: flex;
   align-items: center;
+
+  .container {
+    @include desktop {
+      padding-top: 32px;
+    }
+  }
 
   @include mobile {
     padding-top: 48px;
@@ -87,6 +93,7 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      margin-top: 0px;
 
       @include tablet {
         font-size: 40px;

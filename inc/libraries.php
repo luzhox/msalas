@@ -8,6 +8,18 @@ add_action( 'wp_enqueue_scripts', function() {
         array(),
         $theme_ver
       );
+
+      wp_enqueue_style( 'flip',
+      get_template_directory_uri().'/vendors/flipbook.style.css',
+      array(),
+      $theme_ver
+    );
+
+    wp_enqueue_style( 'fontaws',
+    get_template_directory_uri().'/vendors/css/font-awesome.css',
+    array(),
+    $theme_ver
+  );
       wp_enqueue_style( 'aos',
         get_template_directory_uri().'/styles/css/aos.css',
         array(),
@@ -30,6 +42,12 @@ add_action( 'wp_enqueue_scripts', function() {
       array( 'jquery' ),
       $theme_ver,
       false
+       );
+       wp_enqueue_script( 'flipjs',
+       get_template_directory_uri().'/vendors/flipbook.min.js',
+       array( 'jquery' ),
+       $theme_ver,
+       false
        );
       wp_enqueue_script( 'main',
       get_template_directory_uri().'/build/js/main.js',

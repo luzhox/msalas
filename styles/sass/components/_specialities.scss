@@ -1,0 +1,322 @@
+.specialities {
+  background-size: cover;
+
+  background-attachment: fixed;
+  padding-top: 120px;
+
+  @include desktop {
+    display: flex;
+    padding-top: 0px;
+  }
+
+  .idPosition {
+    position: relative;
+    top: -180px;
+  }
+
+  &__menu {
+    position: sticky;
+    top: 0px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+
+    @include desktop {
+      width: auto;
+      height: 100vh;
+      margin-left: 0px;
+      margin-right: initial;
+      justify-content: flex-start;
+      top: 24px;
+    }
+
+    @media only screen and (min-width: 1280px) and (min-height: 680px) {
+      top: 0px;
+    }
+
+    &__content {
+      display: flex;
+      padding-left: 24px;
+      overflow-x: auto;
+
+      @include desktop {
+        overflow-x: initial;
+        display: initial
+      }
+
+    }
+
+    &__item {
+      color: white;
+      margin-bottom: 32px;
+      text-align: center;
+      min-width: max-content;
+      margin-right: 24px;
+
+      @include desktop {
+        min-width: auto;
+        margin-right: 0px;
+      }
+
+      a {
+        color: white;
+        font-family: $primary-text;
+        font-size: 20px;
+
+        @include desktop {
+          font-size: 18px;
+
+        }
+
+        @media only screen and (min-width: 1280px) and (min-height: 680px) {
+          font-size: 20px;
+
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 25%;
+          height: 2px;
+          background: white;
+          transition: width .3s;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 8px;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .container {
+    max-width: 860px;
+
+    @include desktop {
+      padding-top: 180px;
+    }
+  }
+
+  &__intro {
+    margin-bottom: 32px;
+
+    h1 {
+      color: #f0f0f2;
+      font-family: $primary-text;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      margin-bottom: 16px;
+      text-align: center;
+      background: rgb(14, 14, 36);
+      padding: 16px;
+
+      @include desktop {
+        font-size: 52px;
+      }
+
+      @media only screen and (min-width: 1280px) and (min-height: 680px) {
+        font-size: 64px;
+
+      }
+
+    }
+
+    p {
+      color: white;
+      font-family: $secondary-text;
+      font-size: 18px;
+      text-align: center;
+
+      @include desktop {
+        font-size: 19px;
+      }
+
+      @media only screen and (min-width: 1280px) and (min-height: 680px) {
+        font-size: 21px;
+
+      }
+    }
+  }
+
+  &__content {
+    &__section {
+      position: relative;
+      margin-top: 32px;
+
+      @include desktop {
+        margin-top: 170px;
+      }
+
+      &__img {
+        width: 340px;
+        position: absolute;
+        left: -120px;
+        bottom: 0;
+        z-index: 999;
+        display: none;
+
+        @include desktop {
+          display: block;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+
+      .number {
+        position: absolute;
+        right: 0px;
+        top: -20px;
+        font-size: 240px;
+        line-height: 100%;
+        color: white;
+        font-family: $primary-text;
+        opacity: 0.1;
+        z-index: 1;
+
+        @include desktop {
+          font-size: 380px;
+        }
+      }
+
+
+
+
+      h3 {
+        color: #f0f0f2;
+        font-family: $primary-text;
+        font-size: 32px;
+        line-height: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 16px;
+
+
+
+        @include desktop {
+          font-size: 52px;
+          padding-right: 12px;
+          padding-left: 240px;
+          text-align: left;
+          top: 28px;
+          position: relative;
+          z-index: 9999;
+        }
+
+        @media only screen and (min-width: 1280px) and (min-height: 680px) {
+          font-size: 66px;
+
+        }
+      }
+
+      .text {
+        padding: 24px;
+        background: #0E0E24;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+
+        @include desktop {
+          padding-left: 240px;
+          width: 860px;
+          height: 300px;
+
+
+        }
+
+        p {
+          color: white;
+          font-family: $secondary-text;
+          font-size: 16px;
+          line-height: 150%;
+          max-width: 85%;
+
+          @include tablet {
+            font-size: 19px;
+          }
+
+          @media only screen and (min-width: 1280px) and (min-height: 680px) {
+            font-size: 21px;
+
+          }
+
+        }
+      }
+
+      &.family {
+        .specialities__content__section__img {
+          left: inherit;
+          right: -110px !important;
+          top: -78px;
+          width: 440px;
+          transform: rotateY(-180deg);
+
+        }
+      }
+
+      &.transformation {
+        margin-top: 80px;
+
+        .specialities__content__section__img {
+          left: -240px;
+          top: 61px;
+          width: 539px;
+          transform: rotateY(-180deg);
+
+        }
+
+        .text {
+
+          @include desktop {
+            height: 340px;
+          }
+        }
+      }
+
+      &:nth-child(2n) {
+        .specialities__content__section__img {
+          left: inherit;
+          right: -70px;
+        }
+
+        h3 {
+
+
+          @include desktop {
+            padding-left: 24px;
+          }
+        }
+
+        .text {
+
+          padding-left: 24px;
+
+          @include desktop {
+            padding-right: 240px;
+          }
+        }
+
+        .number {
+          right: inherit;
+          left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.publications {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), radial-gradient(50% 50% at 50% 50%, #1A1936 0%, #0E0D24 100%);
+  background-blend-mode: normal, multiply;
+
+  .container {
+    @include mobile {
+      width: 100%;
+      padding-left: 32px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+
+    h3,h2  {
+      color: white;
+      font-family: $primary-text;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      @include tablet {
+        font-size: 40px;
+      }
+    }
+
+    &__menu {
+      display: flex;
+      margin-top: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      @include tablet {
+        margin-top: 0px;
+      }
+
+      button {
+        scroll-snap-align: center;
+        padding: 8px 24px;
+        display: inline-block;
+        border-radius: 52px;
+        margin-right: 16px;
+        font-family: $secondary-text;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: white;
+        background: transparent;
+        border: 1px solid white;
+        min-width: max-content;
+
+        @include tablet {
+          font-size: 18px;
+          padding: 12px 32px;
+        }
+
+        &.active {
+          background: white;
+          color: #0E0D24;
+        }
+
+        @include tablet {
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+      }
+    }
+  }
+
+  &__articles {
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 32px;
+    margin-right: 32px;
+
+    @include tablet {
+      margin-right: 0px;
+    }
+
+    .single-content__others-articles__item {
+      max-width: 370px;
+      border: 1px solid #202054;
+      margin-bottom: 32px;
+
+      @include tablet {
+        margin-right: 32px;
+
+      }
+
+      .img {
+        border-radius: 0;
+
+        img {
+          border-radius: 0;
+          height: 240px;
+          filter: grayscale(100%);
+        }
+      }
+
+      .text {
+        padding: 24px;
+        text-align: center;
+
+        a {
+          color: white;
+        }
+
+        h5 {
+          color: #FFF;
+          font-family: $secondary-text;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        img {
+          filter: grayscale(0%) !important;
+        }
+      }
+    }
+  }
+}

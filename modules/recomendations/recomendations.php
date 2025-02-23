@@ -2,6 +2,7 @@
   <div class="container">
     <div class="recomendations__title">
       <h3><?php the_sub_field('title')?></h3>
+      <?php the_sub_field('description')?>
     </div>
     <div class="recomendations__content">
       <?php if (have_rows('recomendations')) {while (have_rows('recomendations')) {the_row(); ?>
